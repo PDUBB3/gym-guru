@@ -1,0 +1,17 @@
+[
+  {
+    "gymId": "ObjectId",
+    "userId": "ObjectId",
+    "categories": [
+      {
+        "category": "Cleanliness",
+        "rating": 4.5
+      },
+      {
+        "category": "Staff",
+        "rating": 1
+      }
+    ],
+    "comment": "Very clean, staff are horrible"
+  }
+]

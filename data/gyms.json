@@ -1,0 +1,22 @@
+[
+  {
+    "name": "PureGym",
+    "address": "Unit 7, Windmill Shopping Centre, Cape Hill",
+    "postCode": "B66 3PR",
+    "city": "Birmingham",
+    "contactNumber": "0121 626 3915",
+    "openingTimes": [
+      {
+        "dayIndex": 1,
+        "dayName": "Sunday",
+        "dayShort": "Sun",
+        "startTime": "08:00",
+        "endTime": "19:00"
+      }
+    ],
+    "rating": 4.5,
+    "ratings": 10,
+    "exerciseFacilities": "ref exerciseFacilities",
+    "otherFacilities": "ref otherFacilities"
+  }
+]
