@@ -15,7 +15,255 @@
       }
     ],
     "rating": 4.5,
-    "ratings": 10,
+    "reviews": "ref reviews",
+    "exerciseFacilities": "ref exerciseFacilities",
+    "otherFacilities": "ref otherFacilities"
+  },
+  {
+    "name": "The Gym Group Birmingham City Centre",
+    "address": "79-84 High St, Birmingham",
+    "postCode": "B4 7TE",
+    "city": "Birmingham",
+    "contactNumber": "0300 303 4800",
+    "openingTimes": [
+      {
+        "dayIndex": 1,
+        "dayName": "Sunday",
+        "dayShort": "Sun",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 2,
+        "dayName": "Monday",
+        "dayShort": "Mon",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 3,
+        "dayName": "Tuesday",
+        "dayShort": "Tue",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 4,
+        "dayName": "Wednesday",
+        "dayShort": "Wed",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 5,
+        "dayName": "Thursday",
+        "dayShort": "Thu",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 6,
+        "dayName": "Friday",
+        "dayShort": "Fri",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 7,
+        "dayName": "Saturday",
+        "dayShort": "Sat",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      }
+    ],
+    "rating": 3.5,
+    "reviews": "ref reviews",
+    "exerciseFacilities": "ref exerciseFacilities",
+    "otherFacilities": "ref otherFacilities"
+  },
+  {
+    "name": "David Lloyd",
+    "address": "Shady Ln., Great Barr, Birmingham",
+    "postCode": "B44 9ER",
+    "city": "Birmingham",
+    "contactNumber": "0345 129 6773",
+    "openingTimes": [
+      {
+        "dayIndex": 1,
+        "dayName": "Sunday",
+        "dayShort": "Sun",
+        "startTime": "08:00",
+        "endTime": "20:00"
+      },
+      {
+        "dayIndex": 2,
+        "dayName": "Monday",
+        "dayShort": "Mon",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 3,
+        "dayName": "Tuesday",
+        "dayShort": "Tue",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 4,
+        "dayName": "Wednesday",
+        "dayShort": "Wed",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 5,
+        "dayName": "Thursday",
+        "dayShort": "Thu",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 6,
+        "dayName": "Friday",
+        "dayShort": "Fri",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 7,
+        "dayName": "Saturday",
+        "dayShort": "Sat",
+        "startTime": "07:00",
+        "endTime": "20:00"
+      }
+    ],
+    "rating": 4.8,
+    "reviews": "ref reviews",
+    "exerciseFacilities": "ref exerciseFacilities",
+    "otherFacilities": "ref otherFacilities"
+  },
+  {
+    "name": "JD Gyms Birmingham",
+    "address": "Allesley Street OFF THE NEWTON MIDDLEWAY",
+    "postCode": "B6 4NF",
+    "city": "Birmingham",
+    "contactNumber": "0121 270 6921",
+    "openingTimes": [
+      {
+        "dayIndex": 1,
+        "dayName": "Sunday",
+        "dayShort": "Sun",
+        "startTime": "08:00",
+        "endTime": "20:00"
+      },
+      {
+        "dayIndex": 2,
+        "dayName": "Monday",
+        "dayShort": "Mon",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 3,
+        "dayName": "Tuesday",
+        "dayShort": "Tue",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 4,
+        "dayName": "Wednesday",
+        "dayShort": "Wed",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 5,
+        "dayName": "Thursday",
+        "dayShort": "Thu",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 6,
+        "dayName": "Friday",
+        "dayShort": "Fri",
+        "startTime": "06:00",
+        "endTime": "22:00"
+      },
+      {
+        "dayIndex": 7,
+        "dayName": "Saturday",
+        "dayShort": "Sat",
+        "startTime": "08:00",
+        "endTime": "20:00"
+      }
+    ],
+    "rating": 3.2,
+    "reviews": "ref reviews",
+    "exerciseFacilities": "ref exerciseFacilities",
+    "otherFacilities": "ref otherFacilities"
+  },
+  {
+    "name": "24/7 Fitness Birmingham Gym",
+    "address": "Hagley Rd, Bearwood",
+    "postCode": "B66 4AU",
+    "city": "Birmingham",
+    "contactNumber": "0121 420 2471",
+    "openingTimes": [
+      {
+        "dayIndex": 1,
+        "dayName": "Sunday",
+        "dayShort": "Sun",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 2,
+        "dayName": "Monday",
+        "dayShort": "Mon",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 3,
+        "dayName": "Tuesday",
+        "dayShort": "Tue",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 4,
+        "dayName": "Wednesday",
+        "dayShort": "Wed",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 5,
+        "dayName": "Thursday",
+        "dayShort": "Thu",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 6,
+        "dayName": "Friday",
+        "dayShort": "Fri",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      },
+      {
+        "dayIndex": 7,
+        "dayName": "Saturday",
+        "dayShort": "Sat",
+        "startTime": "00:00",
+        "endTime": "00:00"
+      }
+    ],
+    "rating": 5,
+    "reviews": "ref reviews",
     "exerciseFacilities": "ref exerciseFacilities",
     "otherFacilities": "ref otherFacilities"
   }

@@ -10,8 +10,69 @@
       {
         "category": "Staff",
         "rating": 1
+      },
+      {
+        "category": "Facilities",
+        "rating": 4
       }
     ],
-    "comment": "Very clean, staff are horrible"
+    "comment": "Very clean gym, nice choice of machines for different workouts. I did find the staff quite rude though and not that knowledgeable."
+  },
+  {
+    "gymId": "ObjectId",
+    "userId": "ObjectId",
+    "categories": [
+      {
+        "category": "Cleanliness",
+        "rating": 5
+      },
+      {
+        "category": "Staff",
+        "rating": 5
+      },
+      {
+        "category": "Facilities",
+        "rating": 3
+      }
+    ],
+    "comment": "I absolutely love the team at this gym, all of the staff are so helpful. My only negative is that the actual gym isn't that large and there aren't any fitness studios."
+  },
+  {
+    "gymId": "ObjectId",
+    "userId": "ObjectId",
+    "categories": [
+      {
+        "category": "Cleanliness",
+        "rating": 3
+      },
+      {
+        "category": "Staff",
+        "rating": 3
+      },
+      {
+        "category": "Facilities",
+        "rating": 2
+      }
+    ],
+    "comment": "It was my first trip back to the gym since their reopening, and quite honestly, I did not feel comfortable with the lack of COVID controls."
+  },
+  {
+    "gymId": "ObjectId",
+    "userId": "ObjectId",
+    "categories": [
+      {
+        "category": "Cleanliness",
+        "rating": 5
+      },
+      {
+        "category": "Staff",
+        "rating": 5
+      },
+      {
+        "category": "Facilities",
+        "rating": 5
+      }
+    ],
+    "comment": "Can't rate this gym highly enough, great selection of equipment, nice leisure area and staff are always so polite and eager to help."
   }
 ]
