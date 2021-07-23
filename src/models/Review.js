@@ -1,10 +1,10 @@
 const { Schema, model } = require("mongoose");
 
 const schema = {
-  gymId: {
-    type: Schema.Types.ObjectId,
-    ref: "Gym",
-  },
+  // gymId: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: "Gym",
+  // },
   categories: [
     {
       category: {

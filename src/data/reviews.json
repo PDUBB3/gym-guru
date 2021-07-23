@@ -1,7 +1,5 @@
 [
   {
-    "gymId": "ObjectId",
-    "userId": "ObjectId",
     "categories": [
       {
         "category": "Cleanliness",
@@ -19,8 +17,6 @@
     "comment": "Very clean gym, nice choice of machines for different workouts. I did find the staff quite rude though and not that knowledgeable."
   },
   {
-    "gymId": "ObjectId",
-    "userId": "ObjectId",
     "categories": [
       {
         "category": "Cleanliness",
@@ -38,8 +34,6 @@
     "comment": "I absolutely love the team at this gym, all of the staff are so helpful. My only negative is that the actual gym isn't that large and there aren't any fitness studios."
   },
   {
-    "gymId": "ObjectId",
-    "userId": "ObjectId",
     "categories": [
       {
         "category": "Cleanliness",
@@ -57,8 +51,6 @@
     "comment": "It was my first trip back to the gym since their reopening, and quite honestly, I did not feel comfortable with the lack of COVID controls."
   },
   {
-    "gymId": "ObjectId",
-    "userId": "ObjectId",
     "categories": [
       {
         "category": "Cleanliness",

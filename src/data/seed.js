@@ -19,20 +19,30 @@ db.once("open", async () => {
 
     console.log("Collections deleted!!!");
 
-    await Gym.insertMany(gyms);
+    await ExerciseFacilities.insertMany(exerciseFacilities);
+    console.log("ExerciseFacilities seeded successfully!!!");
+
+    await OtherFacilities.insertMany(otherFacilities);
+    console.log("OtherFacilities seeded successfully!!!");
+
+    await Review.insertMany(reviews);
+    console.log("Reviews seeded successfully!!!");
+
+    const exerciseFacilitiesFromDb = await ExerciseFacilities.find({});
+    const otherFacilitiesFromDb = await OtherFacilities.find({});
+    const reviewsFromDb = await Review.find({});
+
+    const gymsToSeed = gyms.map((gym, index) => {
+      return {
+        ...gym,
+        exerciseFacilities: exerciseFacilitiesFromDb[index]._id,
+        otherFacilities: otherFacilitiesFromDb[index]._id,
+        // reviews: reviewsFromDb[index]._id,
+      };
+    });
+
+    await Gym.insertMany(gymsToSeed);
     console.log("Gyms seeded successfully!!!");
-
-    // const menusFromDb = await Menu.find({});
-
-    // const restaurantsToSeed = restaurants.map((restaurant, index) => {
-    //   return {
-    //     ...restaurant,
-    //     menu: menusFromDb[index]._id,
-    //   };
-    // });
-
-    // await Restaurant.insertMany(restaurantsToSeed);
-    // console.log("Restaurants seeded successfully!!!");
 
     process.exit(0);
   } catch (error) {
