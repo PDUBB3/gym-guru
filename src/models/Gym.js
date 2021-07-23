@@ -21,10 +21,28 @@ const schema = {
     type: String,
     required: true,
   },
-  openingTimes: {
-    type: String,
-    required: false,
-  },
+  openingTimes: [
+    {
+      dayIndex: Number,
+      required: true,
+    },
+    {
+      dayName: String,
+      required: true,
+    },
+    {
+      dayShort: String,
+      required: true,
+    },
+    {
+      startTime: String,
+      required: true,
+    },
+    {
+      endTime: String,
+      required: true,
+    },
+  ],
   rating: {
     type: Number,
     required: false,
