@@ -15,9 +15,9 @@
       }
     ],
     "rating": 4.5,
-    "reviews": "ref reviews",
-    "exerciseFacilities": "ref exerciseFacilities",
-    "otherFacilities": "ref otherFacilities"
+    "reviews": [],
+    "exerciseFacilities": [],
+    "otherFacilities": []
   },
   {
     "name": "The Gym Group Birmingham City Centre",
@@ -77,9 +77,9 @@
       }
     ],
     "rating": 3.5,
-    "reviews": "ref reviews",
-    "exerciseFacilities": "ref exerciseFacilities",
-    "otherFacilities": "ref otherFacilities"
+    "reviews": [],
+    "exerciseFacilities": [],
+    "otherFacilities": []
   },
   {
     "name": "David Lloyd",
@@ -139,9 +139,9 @@
       }
     ],
     "rating": 4.8,
-    "reviews": "ref reviews",
-    "exerciseFacilities": "ref exerciseFacilities",
-    "otherFacilities": "ref otherFacilities"
+    "reviews": [],
+    "exerciseFacilities": [],
+    "otherFacilities": []
   },
   {
     "name": "JD Gyms Birmingham",
@@ -201,9 +201,9 @@
       }
     ],
     "rating": 3.2,
-    "reviews": "ref reviews",
-    "exerciseFacilities": "ref exerciseFacilities",
-    "otherFacilities": "ref otherFacilities"
+    "reviews": [],
+    "exerciseFacilities": [],
+    "otherFacilities": []
   },
   {
     "name": "24/7 Fitness Birmingham Gym",
@@ -263,8 +263,8 @@
       }
     ],
     "rating": 5,
-    "reviews": "ref reviews",
-    "exerciseFacilities": "ref exerciseFacilities",
-    "otherFacilities": "ref otherFacilities"
+    "reviews": [],
+    "exerciseFacilities": [],
+    "otherFacilities": []
   }
 ]
