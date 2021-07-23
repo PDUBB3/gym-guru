@@ -23,24 +23,26 @@ const schema = {
   },
   openingTimes: [
     {
-      dayIndex: Number,
-      required: true,
-    },
-    {
-      dayName: String,
-      required: true,
-    },
-    {
-      dayShort: String,
-      required: true,
-    },
-    {
-      startTime: String,
-      required: true,
-    },
-    {
-      endTime: String,
-      required: true,
+      dayIndex: {
+        type: Number,
+        required: true,
+      },
+      dayName: {
+        type: String,
+        required: true,
+      },
+      dayShort: {
+        type: String,
+        required: true,
+      },
+      startTime: {
+        type: String,
+        required: true,
+      },
+      endTime: {
+        type: String,
+        required: true,
+      },
     },
   ],
   rating: {
