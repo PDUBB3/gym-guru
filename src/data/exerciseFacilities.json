@@ -1,22 +1,17 @@
 [
   {
-    "name": "Weight Area",
-    "maxCapacity": "20"
+    "name": "Weight Area"
   },
   {
-    "name": "Cardio Area",
-    "maxCapacity": "40"
+    "name": "Cardio Area"
   },
   {
-    "name": "Fitness Studio",
-    "maxCapacity": "15"
+    "name": "Fitness Studio"
   },
   {
-    "name": "Swimming Pool",
-    "maxCapacity": "35"
+    "name": "Swimming Pool"
   },
   {
-    "name": "Tennis Court",
-    "maxCapacity": "10"
+    "name": "Tennis Court"
   }
 ]

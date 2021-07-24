@@ -5,10 +5,6 @@ const schema = {
     type: String,
     required: true,
   },
-  maxCapacity: {
-    type: Number,
-    required: true,
-  },
 };
 
 const exerciseFacilitiesSchema = new Schema(schema);
