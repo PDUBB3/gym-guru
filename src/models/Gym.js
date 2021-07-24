@@ -50,18 +50,18 @@ const schema = {
     required: false,
     default: 0,
   },
-  reviews: {
-    type: Schema.Types.ObjectId,
-    ref: "Review",
-  },
-  exerciseFacilities: {
-    type: Schema.Types.ObjectId,
-    ref: "ExerciseFacilities",
-  },
-  otherFacilities: {
-    type: Schema.Types.ObjectId,
-    ref: "OtherFacilities",
-  },
+  exerciseFacilities: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "ExerciseFacilities",
+    },
+  ],
+  otherFacilities: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "OtherFacilities",
+    },
+  ],
 };
 
 const gymSchema = new Schema(schema);

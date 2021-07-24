@@ -14,7 +14,9 @@
         "endTime": "19:00"
       }
     ],
-    "rating": 4.5
+    "rating": 4.5,
+    "exerciseFacilities": [],
+    "otherFacilities": []
   },
   {
     "name": "The Gym Group Birmingham City Centre",
@@ -73,7 +75,9 @@
         "endTime": "00:00"
       }
     ],
-    "rating": 3.5
+    "rating": 3.5,
+    "exerciseFacilities": [],
+    "otherFacilities": []
   },
   {
     "name": "David Lloyd",
@@ -132,7 +136,9 @@
         "endTime": "20:00"
       }
     ],
-    "rating": 4.8
+    "rating": 4.8,
+    "exerciseFacilities": [],
+    "otherFacilities": []
   },
   {
     "name": "JD Gyms Birmingham",
@@ -191,7 +197,9 @@
         "endTime": "20:00"
       }
     ],
-    "rating": 3.2
+    "rating": 3.2,
+    "exerciseFacilities": [],
+    "otherFacilities": []
   },
   {
     "name": "24/7 Fitness Birmingham Gym",
@@ -250,6 +258,8 @@
         "endTime": "00:00"
       }
     ],
-    "rating": 5
+    "rating": 5,
+    "exerciseFacilities": [],
+    "otherFacilities": []
   }
 ]
