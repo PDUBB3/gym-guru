@@ -5,9 +5,9 @@ const {
   OtherFacilities,
   Review,
 } = require("../models");
-const gyms = require("./gyms.json");
-const exerciseFacilities = require("./exerciseFacilities.json");
-const otherFacilities = require("./otherFacilities.json");
+const gyms = require("./gyms");
+const exerciseFacilities = require("./exerciseFacilities");
+const otherFacilities = require("./otherFacilities");
 
 const reviewCategories = ["Cleanliness", "Staff", "Facilities"];
 const comments = [
