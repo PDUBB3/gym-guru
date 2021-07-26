@@ -10,6 +10,7 @@ const typeDefs = gql`
     id: ID!
     name: String!
     address: String!
+    city: String!
     postCode: String!
     contactNumber: String!
     rating: Float!
