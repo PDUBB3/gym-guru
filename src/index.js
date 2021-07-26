@@ -7,7 +7,7 @@ const resolvers = require("./resolvers");
 const server = new ApolloServer({ typeDefs, resolvers });
 
 db.once("open", () => {
-  server.listen().then(({ URL }) => {
-    console.log(`Server ready at ${URL}`);
+  server.listen().then(({ url }) => {
+    console.log(`Server ready at ${url}`);
   });
 });
