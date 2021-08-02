@@ -24,6 +24,21 @@ const typeDefs = gql`
     gyms(city: String, sortBy: String): [Gym]
     gym(id: ID!): Gym
   }
+
+  input CreateGymInput {
+    name: String!
+    address: String!
+    city: String!
+    postCode: String!
+    contactNumber: String!
+    rating: Float!
+    exerciseFacilities: [ID]
+    otherFacilities: [ID]
+  }
+
+  type Mutation {
+    createGym(input: CreateGymInput!): Gym!
+  }
 `;
 
 module.exports = typeDefs;
