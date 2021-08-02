@@ -1,16 +1,32 @@
 const { Gym } = require("../models");
 
 const createGym = async (_, { input }) => {
-  return await Gym.create({
+  const {
+    name,
+    address,
+    city,
+    postCode,
+    contactNumber,
+    exerciseFacilities,
+    otherFacilities,
+  } = input;
+
+  const newGym = await Gym.create({
     name,
     address,
     city,
     postCode,
     contactNumber,
     rating: 0,
-    exerciseFacilities: [],
-    otherFacilities: [],
+    exerciseFacilities,
+    otherFacilities,
   });
+
+  const gym = await Gym.findById(newGym.id)
+    .populate("exerciseFacilities")
+    .populate("otherFacilities");
+
+  return gym;
 };
 
 module.exports = createGym;

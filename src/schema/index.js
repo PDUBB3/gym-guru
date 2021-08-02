@@ -32,8 +32,8 @@ const typeDefs = gql`
     postCode: String!
     contactNumber: String!
     rating: Float!
-    exerciseFacilities: [Facility]
-    otherFacilities: [Facility]
+    exerciseFacilities: [ID]
+    otherFacilities: [ID]
   }
 
   type Mutation {
