@@ -1,65 +1,70 @@
 const { Schema, model } = require("mongoose");
 
+const { hashPassword, validatePassword } = require("../utils/password");
+
 const schema = {
-  firstName = {
+  firstName: {
     type: String,
     required: true,
   },
-
-  lastName = {
+  lastName: {
     type: String,
     required: true,
   },
-
-  email = {
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
     type: String,
     required: true,
   },
-
-  username = {
-    type: String,
-    required: true,
+  isGymOwner: {
+    type: Boolean,
+    default: false,
   },
-
-  password = {
-    type: String,
-    required: true,
-  },
-
-  gymId = {
+  ownedGymId: {
     type: Schema.Types.ObjectId,
     ref: "Gym",
   },
-
-  profileImage = {
+  attendingGymId: {
+    type: Schema.Types.ObjectId,
+    ref: "Gym",
+  },
+  profileImageUrl: {
     type: String,
   },
-
-  city = {
+  city: {
     type: String,
   },
-
-  bio = {
+  bio: {
     type: String,
   },
-
-  goals = {
-    type: [String]
+  goals: {
+    type: [String],
   },
-
-  interests = {
-    type: [String]
+  interests: {
+    type: [String],
   },
-
-  buddies = [
+  buddies: [
     {
       type: Schema.Types.ObjectId,
       ref: "User",
-    }
-  ]
+    },
+  ],
 };
 
 const userSchema = new Schema(schema);
+
+userSchema.pre("save", hashPassword);
+
+userSchema.methods.validatePassword = validatePassword;
 
 const User = model("User", userSchema);
 
