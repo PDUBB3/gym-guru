@@ -55,8 +55,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    login(input: LoginInput): Auth!
-    signUp(input: SignUpInput): Auth!
+    login(input: LoginInput)
+    signUp(input: SignUpInput)
     createGym(input: CreateGymInput!): Gym!
   }
 `;
