@@ -13,7 +13,7 @@ const typeDefs = gql`
     city: String!
     postCode: String!
     contactNumber: String!
-    rating: Float!
+    rating: Float
     exerciseFacilities: [Facility]
     otherFacilities: [Facility]
   }
@@ -31,7 +31,7 @@ const typeDefs = gql`
     city: String!
     postCode: String!
     contactNumber: String!
-    rating: Float!
+    rating: Float
     exerciseFacilities: [ID]
     otherFacilities: [ID]
   }
