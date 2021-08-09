@@ -36,6 +36,17 @@ const typeDefs = gql`
     otherFacilities: [ID]
   }
 
+  type User {
+    firstName: String!
+    lastName: String!
+    email: String!
+    username: String!
+  }
+
+  type Auth {
+    token: ID!
+    user: User!
+  }
   input LoginInput {
     username: String!
     password: String!
@@ -55,8 +66,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    login(input: LoginInput)
-    signUp(input: SignUpInput)
+    login(input: LoginInput): Auth!
+    signUp(input: SignUpInput): Auth!
     createGym(input: CreateGymInput!): Gym!
   }
 `;
