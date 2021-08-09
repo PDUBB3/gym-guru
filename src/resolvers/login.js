@@ -1,5 +1,6 @@
 const { AuthenticationError } = require("apollo-server");
 
+const { signToken } = require("../utils/auth");
 const { User } = require("../models");
 
 const login = async (_, { input }) => {
@@ -16,6 +17,13 @@ const login = async (_, { input }) => {
   if (!isValidPassword) {
     throw new AuthenticationError("Incorrect username or password");
   }
+
+  const token = signToken({
+    id: user._id,
+    email: user.email,
+    username: user.username,
+  });
+  return { user, token };
 };
 
 module.exports = login;

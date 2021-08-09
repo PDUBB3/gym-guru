@@ -3,6 +3,8 @@ const otherFacilities = require("./otherFacilities");
 const gyms = require("./gyms");
 const gym = require("./gym");
 
+const login = require("./login");
+const signUp = require("./signUp");
 const createGym = require("./createGym");
 
 const resolvers = {
@@ -14,6 +16,8 @@ const resolvers = {
   },
   Mutation: {
     createGym,
+    login,
+    signUp,
   },
 };
 
