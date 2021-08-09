@@ -37,8 +37,7 @@ const typeDefs = gql`
   }
 
   type User {
-    firstName: String!
-    lastName: String!
+    id: ID!
     email: String!
     username: String!
   }
@@ -56,6 +55,7 @@ const typeDefs = gql`
     firstName: String!
     lastName: String!
     email: String!
+    username: String!
     password: String!
     profileImageUrl: String!
     city: String!
@@ -66,7 +66,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    login(input: LoginInput): Auth!
+    login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
     createGym(input: CreateGymInput!): Gym!
   }
