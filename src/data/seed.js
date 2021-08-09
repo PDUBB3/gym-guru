@@ -4,10 +4,12 @@ const {
   ExerciseFacilities,
   OtherFacilities,
   Review,
+  User,
 } = require("../models");
 const gyms = require("./gyms");
 const exerciseFacilities = require("./exerciseFacilities");
 const otherFacilities = require("./otherFacilities");
+const users = require("./users");
 
 const reviewCategories = ["Cleanliness", "Staff", "Facilities"];
 const comments = [
@@ -24,6 +26,7 @@ db.once("open", async () => {
     await ExerciseFacilities.deleteMany({});
     await OtherFacilities.deleteMany({});
     await Review.deleteMany({});
+    await User.deleteMany({});
 
     console.log("Collections deleted!!!");
 
@@ -82,6 +85,39 @@ db.once("open", async () => {
 
     await Review.insertMany(reviews);
     console.log("Reviews seeded successfully!!!");
+
+    // Seed users
+    const usernameToGymMapper = {
+      bobsmith: "The Gym Group Birmingham City Centre",
+      alicegreen: "David Lloyd",
+    };
+
+    const usersToSeed = users.map((user) => {
+      const gymName = usernameToGymMapper[user.username];
+
+      const attendingGym = gymsFromDb.find((gym) => {
+        return gym.name === gymName;
+      });
+
+      if (user.isGymOwner) {
+        return {
+          ...user,
+          ownedGymId: attendingGym._id,
+          attendingGymId: attendingGym._id,
+        };
+      }
+      return {
+        ...user,
+        attendingGymId: attendingGym._id,
+      };
+    });
+
+    const promises = usersToSeed.map(async (user) => {
+      await User.create(user);
+    });
+
+    await Promise.all(promises);
+    console.log("Users seeded successfully!!!");
 
     process.exit(0);
   } catch (error) {

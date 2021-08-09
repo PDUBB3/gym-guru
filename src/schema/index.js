@@ -36,7 +36,27 @@ const typeDefs = gql`
     otherFacilities: [ID]
   }
 
+  input LoginInput {
+    username: String!
+    password: String!
+  }
+
+  input SignUpInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    profileImageUrl: String!
+    city: String!
+    bio: String!
+    goals: [String]
+    interests: [String]
+    isGymOwner: Boolean!
+  }
+
   type Mutation {
+    login(input: LoginInput)
+    signUp(input: SignUpInput)
     createGym(input: CreateGymInput!): Gym!
   }
 `;
