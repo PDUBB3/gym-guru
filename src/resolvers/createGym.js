@@ -7,6 +7,7 @@ const createGym = async (_, { input }) => {
     city,
     postCode,
     contactNumber,
+    openingTimes,
     exerciseFacilities,
     otherFacilities,
   } = input;
@@ -17,6 +18,7 @@ const createGym = async (_, { input }) => {
     city,
     postCode,
     contactNumber,
+    openingTimes,
     rating: 0,
     exerciseFacilities,
     otherFacilities,
