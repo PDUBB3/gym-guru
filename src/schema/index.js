@@ -6,6 +6,14 @@ const typeDefs = gql`
     name: String!
   }
 
+  type OpeningTime {
+    dayIndex: Int!
+    dayName: String!
+    dayShort: String!
+    startTime: String!
+    endTime: String!
+  }
+
   type Gym {
     id: ID!
     name: String!
@@ -13,6 +21,7 @@ const typeDefs = gql`
     city: String!
     postCode: String!
     contactNumber: String!
+    openingTimes: [OpeningTime]
     rating: Float
     exerciseFacilities: [Facility]
     otherFacilities: [Facility]
@@ -31,6 +40,7 @@ const typeDefs = gql`
     city: String!
     postCode: String!
     contactNumber: String!
+    openingTimes: [OpeningTimeInput]
     rating: Float
     exerciseFacilities: [ID]
     otherFacilities: [ID]
@@ -63,6 +73,14 @@ const typeDefs = gql`
     goals: [String]
     interests: [String]
     isGymOwner: Boolean!
+  }
+
+  input OpeningTimeInput {
+    dayIndex: Int!
+    dayName: String!
+    dayShort: String!
+    startTime: String!
+    endTime: String!
   }
 
   type Mutation {
