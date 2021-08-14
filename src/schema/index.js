@@ -17,6 +17,7 @@ const typeDefs = gql`
   type Gym {
     id: ID!
     name: String!
+    imageURL: String!
     address: String!
     city: String!
     postCode: String!
@@ -36,6 +37,7 @@ const typeDefs = gql`
 
   input CreateGymInput {
     name: String!
+    imageURL: String!
     address: String!
     city: String!
     postCode: String!

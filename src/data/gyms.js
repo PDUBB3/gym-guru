@@ -1,6 +1,8 @@
 const gyms = [
   {
     name: "PureGym",
+    imageURL:
+      "https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
     address: "Unit 7, Windmill Shopping Centre, Cape Hill",
     postCode: "B66 3PR",
     city: "Birmingham",
@@ -20,6 +22,8 @@ const gyms = [
   },
   {
     name: "The Gym Group Birmingham City Centre",
+    imageURL:
+      "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80",
     address: "79-84 High St, Birmingham",
     postCode: "B4 7TE",
     city: "Birmingham",
@@ -81,6 +85,8 @@ const gyms = [
   },
   {
     name: "David Lloyd",
+    imageURL:
+      "https://images.unsplash.com/photo-1590487988256-9ed24133863e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=369&q=80",
     address: "Shady Ln., Great Barr, Birmingham",
     postCode: "B44 9ER",
     city: "Birmingham",
@@ -142,6 +148,8 @@ const gyms = [
   },
   {
     name: "JD Gyms Birmingham",
+    imageURL:
+      "https://images.unsplash.com/photo-1570829460005-c840387bb1ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80",
     address: "Allesley Street OFF THE NEWTON MIDDLEWAY",
     postCode: "B6 4NF",
     city: "Birmingham",
@@ -203,6 +211,8 @@ const gyms = [
   },
   {
     name: "24/7 Fitness Birmingham Gym",
+    imageURL:
+      "https://images.unsplash.com/photo-1561214078-f3247647fc5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
     address: "Hagley Rd, Bearwood",
     postCode: "B66 4AU",
     city: "Birmingham",
