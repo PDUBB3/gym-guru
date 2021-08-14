@@ -3,6 +3,7 @@ const { Gym } = require("../models");
 const createGym = async (_, { input }) => {
   const {
     name,
+    imageURL,
     address,
     city,
     postCode,
@@ -14,6 +15,7 @@ const createGym = async (_, { input }) => {
 
   const newGym = await Gym.create({
     name,
+    imageURL,
     address,
     city,
     postCode,
