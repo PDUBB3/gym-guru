@@ -33,7 +33,7 @@ const typeDefs = gql`
     otherFacilities: [Facility]
     gyms(city: String, sortBy: String): [Gym]
     gym(id: ID!): Gym
-    findUser(id: ID!): detailedUser
+    findUser(username: String!): detailedUser
   }
 
   input CreateGymInput {
