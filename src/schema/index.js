@@ -33,6 +33,7 @@ const typeDefs = gql`
     otherFacilities: [Facility]
     gyms(city: String, sortBy: String): [Gym]
     gym(id: ID!): Gym
+    findUser(id: ID!): detailedUser
   }
 
   input CreateGymInput {
@@ -46,6 +47,22 @@ const typeDefs = gql`
     rating: Float
     exerciseFacilities: [ID]
     otherFacilities: [ID]
+  }
+
+  type detailedUser {
+    id: ID!
+    username: String!
+    firstName: String!
+    lastName: String!
+    isGymOwner: Boolean
+    ownedGymId: ID
+    attendingGymId: ID
+    profileImageUrl: String!
+    city: String!
+    bio: String!
+    goals: [String]
+    interests: [String]
+    buddies: [ID]
   }
 
   type User {

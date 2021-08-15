@@ -2,6 +2,7 @@ const exerciseFacilities = require("./exerciseFacilities");
 const otherFacilities = require("./otherFacilities");
 const gyms = require("./gyms");
 const gym = require("./gym");
+const findUser = require("./findUser");
 
 const login = require("./login");
 const signUp = require("./signUp");
@@ -13,6 +14,7 @@ const resolvers = {
     otherFacilities,
     gyms,
     gym,
+    findUser,
   },
   Mutation: {
     createGym,
