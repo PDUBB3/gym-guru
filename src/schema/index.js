@@ -34,6 +34,7 @@ const typeDefs = gql`
     gyms(city: String, sortBy: String): [Gym]
     gym(id: ID!): Gym
     findUser(username: String): detailedUser
+    users(city: String): [detailedUser]
   }
 
   input CreateGymInput {
@@ -56,7 +57,7 @@ const typeDefs = gql`
     lastName: String!
     isGymOwner: Boolean
     ownedGymId: ID
-    attendingGymId: ID
+    attendingGymId: Gym
     profileImageUrl: String!
     city: String!
     bio: String!
