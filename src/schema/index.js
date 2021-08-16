@@ -34,6 +34,7 @@ const typeDefs = gql`
     gyms(city: String, sortBy: String): [Gym]
     gym(id: ID!): Gym
     findUser(username: String): detailedUser
+    users(city: String): [detailedUser]
   }
 
   input CreateGymInput {
