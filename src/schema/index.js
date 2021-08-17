@@ -28,6 +28,17 @@ const typeDefs = gql`
     otherFacilities: [Facility]
   }
 
+  type Categories {
+    category: String
+    rating: Float
+  }
+
+  type Review {
+    id: ID!
+    categories: [Categories]
+    comment: String
+  }
+
   type Query {
     exerciseFacilities: [Facility]
     otherFacilities: [Facility]
@@ -35,6 +46,7 @@ const typeDefs = gql`
     gym(id: ID!): Gym
     findUser(username: String): detailedUser
     users(city: String): [detailedUser]
+    reviews(gymId: String): [Review]
   }
 
   input CreateGymInput {
@@ -76,6 +88,7 @@ const typeDefs = gql`
     token: ID!
     user: User!
   }
+
   input LoginInput {
     username: String!
     password: String!
