@@ -39,6 +39,16 @@ const typeDefs = gql`
     REQUESTED
     PENDING
     BUDDIES
+
+  type Categories {
+    category: String
+    rating: Float
+  }
+
+  type Review {
+    id: ID!
+    categories: [Categories]
+    comment: String
   }
 
   type Query {
@@ -49,6 +59,7 @@ const typeDefs = gql`
     findUser(username: String): detailedUser
     users(city: String): [detailedUser]
     getBuddies(requesterId: ID, recipientId: ID, status: BuddyStatus): Buddy
+    reviews(gymId: String): [Review]
   }
 
   input CreateGymInput {
@@ -90,6 +101,7 @@ const typeDefs = gql`
     token: ID!
     user: User!
   }
+
   input LoginInput {
     username: String!
     password: String!

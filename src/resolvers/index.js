@@ -13,6 +13,7 @@ const {
 const login = require("./login");
 const signUp = require("./signUp");
 const createGym = require("./createGym");
+const reviews = require("./reviews");
 
 const resolvers = {
   BuddyStatus: {
@@ -29,6 +30,7 @@ const resolvers = {
     findUser,
     users,
     getBuddies,
+    reviews,
   },
   Mutation: {
     createGym,
