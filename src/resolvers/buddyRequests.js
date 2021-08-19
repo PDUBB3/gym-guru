@@ -1,4 +1,23 @@
-const { Buddies, User } = require("../models");
+const { Buddies } = require("../models");
+
+const getBuddies = async (_, { requesterId, recipientId }) => {
+  console.log(requesterId, recipientId);
+
+  const buddies = await Buddies.find({
+    $or: [
+      {
+        requesterId,
+      },
+      {
+        recipientId,
+      },
+    ],
+  });
+
+  console.log(buddies);
+
+  return buddies[0];
+};
 
 const buddyRequests = async (_, { input }) => {
   const { requesterId, recipientId } = input;
@@ -32,4 +51,9 @@ const rejectBuddyRequest = async (_, { input }) => {
   return docA;
 };
 
-module.exports = { buddyRequests, acceptBuddyRequest, rejectBuddyRequest };
+module.exports = {
+  buddyRequests,
+  acceptBuddyRequest,
+  rejectBuddyRequest,
+  getBuddies,
+};

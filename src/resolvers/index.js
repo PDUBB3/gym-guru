@@ -8,6 +8,7 @@ const {
   buddyRequests,
   acceptBuddyRequest,
   rejectBuddyRequest,
+  getBuddies,
 } = require("./buddyRequests");
 const login = require("./login");
 const signUp = require("./signUp");
@@ -27,6 +28,7 @@ const resolvers = {
     gym,
     findUser,
     users,
+    getBuddies,
   },
   Mutation: {
     createGym,
