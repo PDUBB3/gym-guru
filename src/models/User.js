@@ -55,7 +55,7 @@ const schema = {
   buddies: [
     {
       type: Schema.Types.ObjectId,
-      ref: "User",
+      ref: "Buddies",
     },
   ],
 };

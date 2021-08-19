@@ -28,6 +28,18 @@ const typeDefs = gql`
     otherFacilities: [Facility]
   }
 
+  type Buddy {
+    id: ID!
+    requesterId: ID!
+    recipientId: ID!
+    status: BuddyStatus
+  }
+
+  enum BuddyStatus {
+    REQUESTED
+    PENDING
+    BUDDIES
+
   type Categories {
     category: String
     rating: Float
@@ -46,6 +58,7 @@ const typeDefs = gql`
     gym(id: ID!): Gym
     findUser(username: String): detailedUser
     users(city: String): [detailedUser]
+    getBuddies(requesterId: ID, recipientId: ID, status: BuddyStatus): Buddy
     reviews(gymId: String): [Review]
   }
 
@@ -116,10 +129,18 @@ const typeDefs = gql`
     endTime: String!
   }
 
+  input BuddyInput {
+    requesterId: ID
+    recipientId: ID
+  }
+
   type Mutation {
     login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
     createGym(input: CreateGymInput!): Gym!
+    buddyRequests(input: BuddyInput): Buddy
+    acceptBuddyRequest(input: BuddyInput): Buddy
+    rejectBuddyRequest(input: BuddyInput): Buddy
   }
 `;
 
