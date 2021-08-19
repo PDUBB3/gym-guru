@@ -30,8 +30,15 @@ const typeDefs = gql`
 
   type Buddy {
     id: ID!
-    requester: ID!
-    recipient: ID!
+    requesterId: ID!
+    recipientId: ID!
+    status: BuddyStatus
+  }
+
+  enum BuddyStatus {
+    REQUESTED
+    PENDING
+    BUDDIES
   }
 
   type Query {
@@ -110,8 +117,8 @@ const typeDefs = gql`
   }
 
   input BuddyInput {
-    requester: ID
-    recipient: ID
+    requesterId: ID
+    recipientId: ID
   }
 
   type Mutation {

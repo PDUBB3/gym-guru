@@ -14,6 +14,12 @@ const signUp = require("./signUp");
 const createGym = require("./createGym");
 
 const resolvers = {
+  BuddyStatus: {
+    REQUESTED: 1,
+    PENDING: 2,
+    BUDDIES: 3,
+  },
+
   Query: {
     exerciseFacilities,
     otherFacilities,
