@@ -28,6 +28,12 @@ const typeDefs = gql`
     otherFacilities: [Facility]
   }
 
+  type Buddy {
+    id: ID!
+    requester: ID!
+    recipient: ID!
+  }
+
   type Query {
     exerciseFacilities: [Facility]
     otherFacilities: [Facility]
@@ -103,10 +109,18 @@ const typeDefs = gql`
     endTime: String!
   }
 
+  input BuddyInput {
+    requester: ID
+    recipient: ID
+  }
+
   type Mutation {
     login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
     createGym(input: CreateGymInput!): Gym!
+    buddyRequests(input: BuddyInput): Buddy
+    acceptBuddyRequest(input: BuddyInput): Buddy
+    rejectBuddyRequest(input: BuddyInput): Buddy
   }
 `;
 
