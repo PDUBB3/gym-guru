@@ -1,6 +1,6 @@
 const { Buddies } = require("../models");
 
-const getBuddies = async (_, { requesterId, recipientId }) => {
+const getBuddies = async (_, { requesterId, recipientId, status }) => {
   console.log(requesterId, recipientId);
 
   const buddies = await Buddies.find({
@@ -12,6 +12,7 @@ const getBuddies = async (_, { requesterId, recipientId }) => {
         recipientId,
       },
     ],
+    status,
   });
 
   console.log(buddies);

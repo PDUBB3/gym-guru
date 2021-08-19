@@ -48,7 +48,7 @@ const typeDefs = gql`
     gym(id: ID!): Gym
     findUser(username: String): detailedUser
     users(city: String): [detailedUser]
-    getBuddies(requesterId: ID, recipientId: ID): Buddy
+    getBuddies(requesterId: ID, recipientId: ID, status: BuddyStatus): Buddy
   }
 
   input CreateGymInput {
