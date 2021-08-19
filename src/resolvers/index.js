@@ -8,6 +8,7 @@ const users = require("./users");
 const login = require("./login");
 const signUp = require("./signUp");
 const createGym = require("./createGym");
+const reviews = require("./reviews");
 
 const resolvers = {
   Query: {
@@ -17,6 +18,7 @@ const resolvers = {
     gym,
     findUser,
     users,
+    reviews,
   },
   Mutation: {
     createGym,
