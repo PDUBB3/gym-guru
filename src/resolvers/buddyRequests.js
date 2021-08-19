@@ -1,8 +1,6 @@
 const { Buddies } = require("../models");
 
 const getBuddies = async (_, { requesterId, recipientId, status }) => {
-  console.log(requesterId, recipientId);
-
   const buddies = await Buddies.find({
     $or: [
       {
@@ -14,8 +12,6 @@ const getBuddies = async (_, { requesterId, recipientId, status }) => {
     ],
     status,
   });
-
-  console.log(buddies);
 
   return buddies[0];
 };
