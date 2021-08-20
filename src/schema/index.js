@@ -39,6 +39,7 @@ const typeDefs = gql`
     REQUESTED
     PENDING
     BUDDIES
+  }
 
   type Categories {
     category: String
@@ -134,6 +135,17 @@ const typeDefs = gql`
     recipientId: ID
   }
 
+  input ReviewInput {
+    gymId: ID!
+    categories: [CategoriesInput]
+    comment: String
+  }
+
+  input CategoriesInput {
+    category: String
+    rating: Float
+  }
+
   type Mutation {
     login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
@@ -141,6 +153,7 @@ const typeDefs = gql`
     buddyRequests(input: BuddyInput): Buddy
     acceptBuddyRequest(input: BuddyInput): Buddy
     rejectBuddyRequest(input: BuddyInput): Buddy
+    addReview(input: ReviewInput): Review
   }
 `;
 
