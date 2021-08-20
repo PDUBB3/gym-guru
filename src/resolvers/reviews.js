@@ -6,7 +6,6 @@ const reviews = async (_, { gymId }) => {
 };
 
 const addReview = async (_, { input }) => {
-  console.log(input);
   const newReview = await Review.create(input);
   return newReview;
 };
