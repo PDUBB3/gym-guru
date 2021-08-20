@@ -59,7 +59,7 @@ const typeDefs = gql`
     findUser(username: String): detailedUser
     users(city: String): [detailedUser]
     getBuddies(requesterId: ID, recipientId: ID, status: BuddyStatus): Buddy
-    reviews(gymId: String): [Review]
+    reviews(gymId: ID!): [Review]
   }
 
   input CreateGymInput {
