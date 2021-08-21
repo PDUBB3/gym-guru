@@ -5,4 +5,9 @@ const reviews = async (_, { gymId }) => {
   return gymReviews;
 };
 
-module.exports = reviews;
+const addReview = async (_, { input }) => {
+  const newReview = await Review.create(input);
+  return newReview;
+};
+
+module.exports = { reviews, addReview };

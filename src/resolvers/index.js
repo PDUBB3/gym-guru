@@ -13,7 +13,7 @@ const {
 const login = require("./login");
 const signUp = require("./signUp");
 const createGym = require("./createGym");
-const reviews = require("./reviews");
+const { reviews, addReview } = require("./reviews");
 
 const resolvers = {
   BuddyStatus: {
@@ -39,6 +39,7 @@ const resolvers = {
     buddyRequests,
     acceptBuddyRequest,
     rejectBuddyRequest,
+    addReview,
   },
 };
 
