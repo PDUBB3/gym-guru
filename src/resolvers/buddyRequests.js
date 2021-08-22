@@ -37,7 +37,9 @@ const acceptBuddyRequest = async (_, { input }) => {
     { requesterId, recipientId },
     { $set: { status: 3 } },
     { new: true }
-  );
+  )
+    .populate("requesterId")
+    .populate("recipientId");
 
   return updateDocA;
 };
