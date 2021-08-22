@@ -13,7 +13,7 @@ const getBuddies = async (_, { requesterId, recipientId, status }) => {
     status,
   });
 
-  return buddies[0];
+  return buddies;
 };
 
 const buddyRequests = async (_, { input }) => {
