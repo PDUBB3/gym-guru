@@ -14,6 +14,9 @@ const signUp = async (_, { input }) => {
     bio,
     goals,
     interests,
+    facebookUrl,
+    twitterUrl,
+    instagramUrl,
     isGymOwner,
   } = user;
 
@@ -27,6 +30,9 @@ const signUp = async (_, { input }) => {
     bio,
     goals,
     interests,
+    facebookUrl,
+    twitterUrl,
+    instagramUrl,
     isGymOwner,
   });
 

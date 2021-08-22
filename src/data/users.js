@@ -11,6 +11,9 @@ const users = [
     bio: "Pain or Gain",
     goals: ["Lose Weight", "Gain Muscle"],
     interests: ["Yoga", "Cardio"],
+    facebookUrl: "https://www.facebook.com/",
+    twitterUrl: "https://twitter.com/",
+    instagramUrl: "https://www.instagram.com/",
     isGymOwner: true,
   },
   {

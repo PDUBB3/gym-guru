@@ -52,6 +52,15 @@ const schema = {
   interests: {
     type: [String],
   },
+  facebookUrl: {
+    type: String,
+  },
+  twitterUrl: {
+    type: String,
+  },
+  instagramUrl: {
+    type: String,
+  },
   buddies: [
     {
       type: Schema.Types.ObjectId,

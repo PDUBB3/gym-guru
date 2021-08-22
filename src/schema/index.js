@@ -89,6 +89,9 @@ const typeDefs = gql`
     bio: String!
     goals: [String]
     interests: [String]
+    facebookUrl: String
+    twitterUrl: String
+    instagramUrl: String
     buddies: [ID]
   }
 
@@ -114,12 +117,15 @@ const typeDefs = gql`
     email: String!
     username: String!
     password: String!
-    profileImageUrl: String!
+    profileImageUrl: String
     city: String!
     bio: String!
     goals: [String]
     interests: [String]
-    isGymOwner: Boolean!
+    facebookUrl: String
+    twitterUrl: String
+    instagramUrl: String
+    isGymOwner: Boolean
   }
 
   input OpeningTimeInput {
