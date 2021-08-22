@@ -84,7 +84,7 @@ const typeDefs = gql`
     isGymOwner: Boolean
     ownedGymId: ID
     attendingGymId: Gym
-    profileImageUrl: String!
+    profileImageUrl: String
     city: String!
     bio: String!
     goals: [String]
