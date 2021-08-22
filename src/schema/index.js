@@ -30,8 +30,8 @@ const typeDefs = gql`
 
   type Buddy {
     id: ID!
-    requesterId: ID!
-    recipientId: ID!
+    requesterId: User!
+    recipientId: User!
     status: BuddyStatus
   }
 

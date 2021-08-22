@@ -11,7 +11,9 @@ const getBuddies = async (_, { requesterId, recipientId, status }) => {
       },
     ],
     status,
-  });
+  })
+    .populate("requesterId")
+    .populate("recipientId");
 
   return buddies;
 };
