@@ -89,6 +89,9 @@ const typeDefs = gql`
     bio: String!
     goals: [String]
     interests: [String]
+    facebookUrl: String
+    twitterUrl: String
+    instagramUrl: String
     buddies: [ID]
   }
 
