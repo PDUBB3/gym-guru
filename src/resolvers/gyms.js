@@ -1,20 +1,35 @@
 const { Gym } = require("../models");
 
-const gyms = async (_, { city, sortBy }) => {
+const gyms = async (
+  _,
+  { city, sortBy, exerciseFacilities, otherFacilities }
+) => {
+  const filterObject = {};
+
   if (city) {
-    const gymsFromDb = await Gym.find({ city })
-      .populate("exerciseFacilities")
-      .populate("otherFacilities");
-    return gymsFromDb;
+    filterObject.city = city;
   }
-  if (sortBy === "rating") {
-    return await Gym.find({}).sort({ [sortBy]: -1 });
+  if (exerciseFacilities) {
+    filterObject.exerciseFacilities = {
+      $in: exerciseFacilities,
+    };
+  }
+  if (otherFacilities) {
+    filterObject.otherFacilities = {
+      $in: otherFacilities,
+    };
   }
 
-  const gymsFromDb = await Gym.find({})
+  if (sortBy) {
+    return Gym.find(filterObject)
+      .sort({ [sortBy]: -1 })
+      .populate("exerciseFacilities")
+      .populate("otherFacilities");
+  }
+
+  return Gym.find(filterObject)
     .populate("exerciseFacilities")
     .populate("otherFacilities");
-  return gymsFromDb;
 };
 
 module.exports = gyms;
