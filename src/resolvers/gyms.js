@@ -9,12 +9,12 @@ const gyms = async (
   if (city) {
     filterObject.city = city;
   }
-  if (exerciseFacilities) {
+  if (exerciseFacilities && exerciseFacilities.length) {
     filterObject.exerciseFacilities = {
       $in: exerciseFacilities,
     };
   }
-  if (otherFacilities) {
+  if (otherFacilities && otherFacilities.length) {
     filterObject.otherFacilities = {
       $in: otherFacilities,
     };
