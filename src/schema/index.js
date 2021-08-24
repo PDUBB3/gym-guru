@@ -55,7 +55,12 @@ const typeDefs = gql`
   type Query {
     exerciseFacilities: [Facility]
     otherFacilities: [Facility]
-    gyms(city: String, sortBy: String): [Gym]
+    gyms(
+      city: String
+      sortBy: String
+      exerciseFacilities: [ID]
+      otherFacilities: [ID]
+    ): [Gym]
     gym(id: ID!): Gym
     findUser(username: String): detailedUser
     users(city: String): [detailedUser]
