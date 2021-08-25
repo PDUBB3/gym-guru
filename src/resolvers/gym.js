@@ -1,10 +1,14 @@
 const { Gym } = require("../models");
 
 const gym = async (_, { id }) => {
-  const gymsFromDb = await Gym.findById(id)
+  return await Gym.findById(id)
     .populate("exerciseFacilities")
     .populate("otherFacilities");
-  return gymsFromDb;
 };
 
-module.exports = gym;
+const updateGymRating = async (_, { input }) => {
+  const { id, rating } = input;
+  return await Gym.findByIdAndUpdate(id, { rating: rating });
+};
+
+module.exports = { gym, updateGymRating };

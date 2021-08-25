@@ -157,6 +157,11 @@ const typeDefs = gql`
     rating: Float
   }
 
+  input GymRating {
+    id: ID!
+    rating: Float!
+  }
+
   type Mutation {
     login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
@@ -165,6 +170,7 @@ const typeDefs = gql`
     acceptBuddyRequest(input: BuddyInput): Buddy
     rejectBuddyRequest(input: BuddyInput): Buddy
     addReview(input: ReviewInput): Review
+    updateGymRating(input: GymRating): Gym
   }
 `;
 

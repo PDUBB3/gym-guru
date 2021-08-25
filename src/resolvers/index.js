@@ -1,7 +1,7 @@
 const exerciseFacilities = require("./exerciseFacilities");
 const otherFacilities = require("./otherFacilities");
 const gyms = require("./gyms");
-const gym = require("./gym");
+const { gym, updateGymRating } = require("./gym");
 const findUser = require("./findUser");
 const users = require("./users");
 const {
@@ -40,6 +40,7 @@ const resolvers = {
     acceptBuddyRequest,
     rejectBuddyRequest,
     addReview,
+    updateGymRating,
   },
 };
 
