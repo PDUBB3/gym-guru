@@ -3,7 +3,7 @@ const { gql } = require("apollo-server");
 const typeDefs = gql`
   type Facility {
     id: ID!
-    name: String!
+    name: String
   }
 
   type OpeningTime {
@@ -161,6 +161,19 @@ const typeDefs = gql`
     rating: Float!
   }
 
+  input updateGymInput {
+    name: String!
+    id: ID!
+    imageURL: String!
+    address: String!
+    city: String!
+    postCode: String!
+    contactNumber: String!
+    openingTimes: [OpeningTimeInput]
+    exerciseFacilities: [ID]
+    otherFacilities: [ID]
+  }
+
   type Mutation {
     login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
@@ -170,6 +183,7 @@ const typeDefs = gql`
     rejectBuddyRequest(input: BuddyInput): Buddy
     addReview(input: ReviewInput): Review
     updateGymRating(input: GymRating): Gym
+    updateGym(input: updateGymInput): Gym
   }
 `;
 
