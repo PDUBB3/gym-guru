@@ -68,6 +68,14 @@ const typeDefs = gql`
     reviews(gymId: ID!): [Review]
   }
 
+  input OpeningTimeInput {
+    dayIndex: Int!
+    dayName: String!
+    dayShort: String!
+    startTime: String!
+    endTime: String!
+  }
+
   input CreateGymInput {
     name: String!
     imageURL: String!
@@ -76,7 +84,6 @@ const typeDefs = gql`
     postCode: String!
     contactNumber: String!
     openingTimes: [OpeningTimeInput]
-    rating: Float
     exerciseFacilities: [ID]
     otherFacilities: [ID]
   }
@@ -131,14 +138,6 @@ const typeDefs = gql`
     twitterUrl: String
     instagramUrl: String
     isGymOwner: Boolean
-  }
-
-  input OpeningTimeInput {
-    dayIndex: Int!
-    dayName: String!
-    dayShort: String!
-    startTime: String!
-    endTime: String!
   }
 
   input BuddyInput {
