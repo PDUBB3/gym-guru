@@ -111,6 +111,9 @@ const typeDefs = gql`
     id: ID!
     email: String!
     username: String!
+    isGymOwner: String!
+    ownedGymId: String
+    attendingGymId: String
   }
 
   type Auth {

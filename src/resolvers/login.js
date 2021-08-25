@@ -22,7 +22,11 @@ const login = async (_, { input }) => {
     id: user._id,
     email: user.email,
     username: user.username,
+    isGymOwner: user.isGymOwner,
+    ownedGymId: user.ownedGymId,
+    attendingGymId: user.attendingGymId,
   });
+
   return { user, token };
 };
 
