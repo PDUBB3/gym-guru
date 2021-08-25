@@ -5,7 +5,7 @@ const users = async (_, { city }) => {
     const usersFromDb = await User.find({ city })
       .populate("buddies")
       .populate("attendingGymId");
-    return gymsFromDb;
+    return usersFromDb;
   }
 
   const usersFromDb = await User.find({})
