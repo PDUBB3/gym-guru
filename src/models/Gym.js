@@ -7,7 +7,6 @@ const schema = {
   },
   imageURL: {
     type: String,
-    required: true,
   },
   address: {
     type: String,
