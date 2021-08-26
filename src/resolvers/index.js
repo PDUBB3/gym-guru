@@ -1,20 +1,21 @@
-const exerciseFacilities = require("./exerciseFacilities");
-const otherFacilities = require("./otherFacilities");
 const gyms = require("./gyms");
 const { gym, updateGymRating } = require("./gym");
+const createGym = require("./createGym");
 const updateGym = require("./updateGym");
-const findUser = require("./findUser");
+const exerciseFacilities = require("./exerciseFacilities");
+const otherFacilities = require("./otherFacilities");
 const users = require("./users");
+const findUser = require("./findUser");
+const updateUser = require("./updateUser");
+const login = require("./login");
+const signUp = require("./signUp");
+const { reviews, addReview } = require("./reviews");
 const {
   buddyRequests,
   acceptBuddyRequest,
   rejectBuddyRequest,
   getBuddies,
 } = require("./buddyRequests");
-const login = require("./login");
-const signUp = require("./signUp");
-const createGym = require("./createGym");
-const { reviews, addReview } = require("./reviews");
 
 const resolvers = {
   BuddyStatus: {
@@ -33,6 +34,7 @@ const resolvers = {
     getBuddies,
     reviews,
   },
+
   Mutation: {
     createGym,
     login,
@@ -43,6 +45,7 @@ const resolvers = {
     addReview,
     updateGymRating,
     updateGym,
+    updateUser,
   },
 };
 

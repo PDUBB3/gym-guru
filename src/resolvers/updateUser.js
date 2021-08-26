@@ -1,15 +1,11 @@
 const { User } = require("../models");
-const { signToken } = require("../utils/auth");
 
-const signUp = async (_, { input }) => {
-  const user = await User.create(input);
-
+const updateUser = async (_, { input }) => {
   const {
+    id,
     firstName,
     lastName,
     username,
-    email,
-    password,
     profileImageUrl,
     city,
     bio,
@@ -19,14 +15,12 @@ const signUp = async (_, { input }) => {
     twitterUrl,
     instagramUrl,
     isGymOwner,
-  } = user;
+  } = input;
 
-  const token = signToken({
+  const updateUser = await User.findByIdAndUpdate(id, {
     firstName,
     lastName,
     username,
-    email,
-    password,
     profileImageUrl,
     city,
     bio,
@@ -38,10 +32,7 @@ const signUp = async (_, { input }) => {
     isGymOwner,
   });
 
-  return {
-    token,
-    user,
-  };
+  return updateUser;
 };
 
-module.exports = signUp;
+module.exports = updateUser;

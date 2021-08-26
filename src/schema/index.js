@@ -177,6 +177,22 @@ const typeDefs = gql`
     otherFacilities: [ID]
   }
 
+  input updateUserInput {
+    id: ID!
+    username: String!
+    firstName: String!
+    lastName: String!
+    isGymOwner: Boolean!
+    profileImageUrl: String
+    city: String!
+    bio: String!
+    goals: [String]!
+    interests: [String]!
+    facebookUrl: String
+    twitterUrl: String
+    instagramUrl: String
+  }
+
   type Mutation {
     login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
@@ -187,6 +203,7 @@ const typeDefs = gql`
     addReview(input: ReviewInput): Review
     updateGymRating(input: GymRating): Gym
     updateGym(input: updateGymInput): Gym
+    updateUser(input: updateUserInput): detailedUser
   }
 `;
 
