@@ -1,4 +1,3 @@
-const { getNamedType } = require("graphql");
 const { Gym } = require("../models");
 
 const updateGym = async (_, { input }) => {
@@ -14,6 +13,7 @@ const updateGym = async (_, { input }) => {
     exerciseFacilities,
     otherFacilities,
   } = input;
+
   const updatedGym = await Gym.findByIdAndUpdate(id, {
     name,
     imageURL,
