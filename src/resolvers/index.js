@@ -2,6 +2,7 @@ const gyms = require("./gyms");
 const { gym, updateGymRating } = require("./gym");
 const createGym = require("./createGym");
 const updateGym = require("./updateGym");
+const deleteGym = require("./deleteGym");
 const exerciseFacilities = require("./exerciseFacilities");
 const otherFacilities = require("./otherFacilities");
 const users = require("./users");
@@ -47,6 +48,7 @@ const resolvers = {
     updateGym,
     updateUser,
     updateAttendingGym,
+    deleteGym,
   },
 };
 
