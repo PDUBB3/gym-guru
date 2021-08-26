@@ -179,15 +179,15 @@ const typeDefs = gql`
 
   input updateUserInput {
     id: ID!
-    username: String
-    firstName: String
-    lastName: String
-    isGymOwner: Boolean
+    username: String!
+    firstName: String!
+    lastName: String!
+    isGymOwner: Boolean!
     profileImageUrl: String
-    city: String
-    bio: String
-    goals: [String]
-    interests: [String]
+    city: String!
+    bio: String!
+    goals: [String]!
+    interests: [String]!
     facebookUrl: String
     twitterUrl: String
     instagramUrl: String
