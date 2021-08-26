@@ -193,6 +193,11 @@ const typeDefs = gql`
     instagramUrl: String
   }
 
+  input updateAttendingGymInput {
+    id: ID!
+    attendingGymId: ID!
+  }
+
   type Mutation {
     login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
@@ -204,6 +209,7 @@ const typeDefs = gql`
     updateGymRating(input: GymRating): Gym
     updateGym(input: updateGymInput): Gym
     updateUser(input: updateUserInput): detailedUser
+    updateAttendingGym(input: updateAttendingGymInput): detailedUser
   }
 `;
 
