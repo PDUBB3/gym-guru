@@ -35,4 +35,18 @@ const updateUser = async (_, { input }) => {
   return updateUser;
 };
 
-module.exports = updateUser;
+const updateAttendingGym = async (_, { input }) => {
+  const { id, attendingGymId } = input;
+
+  const updateAttendingGym = await User.findByIdAndUpdate(
+    id,
+    {
+      attendingGymId,
+    },
+    { new: true }
+  ).populate("attendingGymId");
+
+  return updateAttendingGym;
+};
+
+module.exports = { updateUser, updateAttendingGym };
