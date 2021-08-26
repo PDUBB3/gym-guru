@@ -7,8 +7,8 @@ const exerciseFacilities = require("./exerciseFacilities");
 const otherFacilities = require("./otherFacilities");
 const users = require("./users");
 const findUser = require("./findUser");
-const updateUser = require("./updateUser");
 const deleteUser = require("./deleteUser");
+const { updateUser, updateAttendingGym } = require("./updateUser");
 const login = require("./login");
 const signUp = require("./signUp");
 const { reviews, addReview } = require("./reviews");
@@ -48,6 +48,7 @@ const resolvers = {
     updateGymRating,
     updateGym,
     updateUser,
+    updateAttendingGym,
     deleteGym,
     deleteUser,
   },
