@@ -204,6 +204,7 @@ const typeDefs = gql`
     updateGymRating(input: GymRating): Gym
     updateGym(input: updateGymInput): Gym
     updateUser(input: updateUserInput): detailedUser
+    deleteGym(id: ID!): Gym
   }
 `;
 
