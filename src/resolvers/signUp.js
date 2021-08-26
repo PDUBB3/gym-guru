@@ -7,6 +7,7 @@ const signUp = async (_, { input }) => {
   const {
     firstName,
     lastName,
+    username,
     email,
     password,
     profileImageUrl,
@@ -23,6 +24,7 @@ const signUp = async (_, { input }) => {
   const token = signToken({
     firstName,
     lastName,
+    username,
     email,
     password,
     profileImageUrl,
