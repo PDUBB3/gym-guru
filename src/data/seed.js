@@ -90,6 +90,9 @@ db.once("open", async () => {
     const usernameToGymMapper = {
       bobsmith: "The Gym Group Birmingham City Centre",
       alicegreen: "David Lloyd",
+      laurawise: "BodyZone Ladies Fitness",
+      ronaldmcdonald: "Anytime Fitness",
+      ashleycrow: "UltraFlex-Gym",
     };
 
     const usersToSeed = users.map((user) => {
