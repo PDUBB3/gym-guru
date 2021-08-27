@@ -198,6 +198,11 @@ const typeDefs = gql`
     attendingGymId: ID!
   }
 
+  input updateOwnedGymInput {
+    id: ID!
+    ownedGymId: ID!
+  }
+
   type Mutation {
     login(input: LoginInput): Auth
     signUp(input: SignUpInput): Auth!
@@ -210,6 +215,7 @@ const typeDefs = gql`
     updateGym(input: updateGymInput): Gym
     updateUser(input: updateUserInput): detailedUser
     updateAttendingGym(input: updateAttendingGymInput): detailedUser
+    updateOwnedGym(input: updateOwnedGymInput): detailedUser
     deleteGym(id: ID!): Gym
     deleteUser(id: ID!): User
   }

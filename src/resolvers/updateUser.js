@@ -49,4 +49,18 @@ const updateAttendingGym = async (_, { input }) => {
   return updateAttendingGym;
 };
 
-module.exports = { updateUser, updateAttendingGym };
+const updateOwnedGym = async (_, { input }) => {
+  const { id, ownedGymId } = input;
+
+  const updateOwnedGym = await User.findByIdAndUpdate(
+    id,
+    {
+      ownedGymId,
+    },
+    { new: true }
+  ).populate("ownedGymId");
+
+  return updateOwnedGym;
+};
+
+module.exports = { updateUser, updateAttendingGym, updateOwnedGym };
