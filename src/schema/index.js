@@ -182,7 +182,7 @@ const typeDefs = gql`
     username: String!
     firstName: String!
     lastName: String!
-    isGymOwner: Boolean
+    isGymOwner: Boolean!
     profileImageUrl: String
     city: String!
     bio: String!
